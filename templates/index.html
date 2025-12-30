@@ -20,7 +20,8 @@
 
         {%if result_path%}
         <h3>사진 처리된!:</h3>
-        <img src="{{result_path}}" alt="결과 사진" style="max-width: 100%; height:auto;" >
+        <img src="data:image/png;base64, {{result_img}}" alt="결과 사진" style="max-width: 100%; height:auto;" >
         {%endif%}
     </body>
+
 </html>
