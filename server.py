@@ -14,7 +14,7 @@ def upload_image():
         #request.form: POST방식의 html폼 데이터에 접근한다.
         input_path=f"static/uploads/{file.filename}"
         output_path=f"static/processed/{file.filename}"
-        file.save(input_path)
+        #file.save(input_path)
         convert_img(input_path, output_path, n_colors)
 
         result_path='/'+output_path
@@ -25,3 +25,4 @@ def upload_image():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+
