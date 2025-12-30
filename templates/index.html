@@ -17,11 +17,8 @@
             <input type="number" name="n_colors" min="2" max="10" value="5" required>
             <button type="submit">외계인의 대단한 기술</button>
         </form>
+        <img src="data:image/png;base64,{{ result_img }}" alt="결과 사진" style="max-width: 100%; height:auto;" >
 
-        {%if result_path%}
-        <h3>사진 처리된!:</h3>
-        <img src="data:image/png;base64, {{result_img}}" alt="결과 사진" style="max-width: 100%; height:auto;" >
-        {%endif%}
     </body>
 
 </html>
