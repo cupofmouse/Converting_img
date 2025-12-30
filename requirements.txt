@@ -1,0 +1,4 @@
+flask
+matplotlib
+opencv-python
+numpy
