@@ -2,9 +2,8 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 
-def convert_img(image_path, output_path, n_colors=5):
-    image=cv2.imread(image_path)
-    image=cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+def convert_img(image_array, n_colors=5):
+    image=cv2.cvtColor(image_array, cv2.COLOR_BGR2RGB)
 
     # plt.imshow(image)
     # plt.axis('off')
@@ -35,10 +34,8 @@ def convert_img(image_path, output_path, n_colors=5):
     new_colors=new_colors*255
     new_colors=new_colors.astype(int)
     new_image=new_colors.reshape(image.shape).astype(np.uint8)
-    plt.imshow(new_image)
-    plt.axis('off')
 
     new_image_bgr=cv2.cvtColor(new_image, cv2.COLOR_RGB2BGR)
-    cv2.imwrite(output_path, new_image_bgr)
-    
-    return output_path
+
+    return new_image_bgr
+
